@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "./App.css";
+import { ROUTES } from "./routes/routes";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { CaseApi, ReviewsApi } from "./context/ContextApi";
+
+const router = createBrowserRouter(ROUTES);
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [serverData, setServerData] = useState();
+  const [reviewsData, setReviewsData] = useState();
+  useEffect(() => {
+    axios.get("http://localhost:1212/api/cases").then((res) => {
+      setServerData(res.data.data);
+    });
+    axios.get("http://localhost:1212/api/reviews").then((res) => {
+      setReviewsData(res.data.data);
+    });
+  }, []);
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <CaseApi.Provider value={{ serverData, setServerData }}>
+        <ReviewsApi.Provider value={{ reviewsData, setReviewsData }}>
+          <RouterProvider router={router} />
+        </ReviewsApi.Provider>
+      </CaseApi.Provider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

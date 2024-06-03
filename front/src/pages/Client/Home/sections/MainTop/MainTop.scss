@@ -1,0 +1,51 @@
+.MainTop-section {
+  padding-top: 200px;
+  width: 100%;
+  height: 90vh;
+  background-color: #0F1123;
+
+  .wrapper {
+    h1 {
+      width: 1076px;
+      margin: 0 auto;
+      color: white;
+      font-size: 58px;
+      font-weight: 900;
+      text-transform: capitalize;
+      line-height: 60px;
+      margin-bottom: 20px;
+
+      span {
+        color: transparent;
+        padding: 0 !important;
+        -webkit-text-stroke: 1px #ffe06f;
+      }
+    }
+
+    p {
+      color: #acacd0;
+      font-size: 18px;
+      width: 753px;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 10px 30px;
+      font-size: 18px;
+      font-weight: 700;
+      color: black;
+      background-color: #FFE06F;
+      border: none;
+      border-radius: 10px;
+      transition: 0.3s;
+      margin: 0 auto;
+      display: block;
+      &:hover {
+        background-color: #3f3eed;
+        color: white;
+      }
+    }
+  }
+}

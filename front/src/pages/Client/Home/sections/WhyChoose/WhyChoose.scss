@@ -1,0 +1,120 @@
+.WhyChoose-section {
+  padding: 80px 0;
+  width: 100%;
+  background-color: #0F1123;
+
+  .content {
+    .title {
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-transform: capitalize;
+      line-height: 60px;
+      font-size: 54px;
+      color: white;
+
+      span {
+        color: #ffe06f;
+      }
+    }
+
+    .descr {
+      color: #acacd0;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      li {
+        display: flex;
+        gap: 10px;
+        height: 40px;
+
+        .circle {
+          background: rgba(63, 62, 237, .2);
+          margin-right: 10px;
+          width: 30px;
+          border-radius: 100px;
+          font-size: 13px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #acacd0
+        }
+
+        p {
+          font-size: 16px;
+          color: #acacd0;
+
+          span {
+            text-decoration: underline;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    button {
+      margin-top: 40px;
+      padding: 10px 30px;
+      font-size: 18px;
+      font-weight: 700;
+      color: black;
+      background-color: #FFE06F;
+      border: none;
+      border-radius: 10px;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: #3f3eed;
+        color: white;
+      }
+    }
+  }
+
+  .wc_img {
+    position: relative;
+    height: 100%;
+    img { 
+      height: 95%;
+      object-fit: cover;
+      padding-left: 40px;
+      animation: bounce 3s infinite;
+    }
+
+    .wc_year {
+      position: absolute;
+      position: absolute;
+      top: 70%;
+      background: #ffe06f;
+      font-weight: 800;
+      padding: 30px;
+      left: 30%;
+      text-align: center;
+      color: #232434;
+      line-height: 36px;
+      text-transform: capitalize;
+      right: 0;
+
+      h4 {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); 
+  }
+  40% {
+    transform: translateY(-16px); 
+  }
+  60% {
+    transform: translateY(-16px); 
+  }
+}

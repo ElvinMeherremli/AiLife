@@ -1,0 +1,122 @@
+.OurSERVICES-section {
+  width: 100%;
+  background-color: #0F1123;
+  padding-bottom: 50px;
+  padding-top: 70px;
+  .wrapper {
+    margin-bottom: 65px;
+
+    .nav-element {
+      span {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 0;
+        line-height: 1px;
+        margin: 0 0 5px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #ffe06f;
+      }
+
+      .line {
+        width: 120px;
+        height: 1px;
+        display: inline-block;
+        background: #ffe06f;
+        margin: 4px 10px;
+      }
+    }
+
+    h2 {
+      width: 60%;
+      margin: 0;
+      font-size: 32px;
+      color: #fff;
+      font-weight: 800;
+      text-transform: capitalize;
+      line-height: 44px;
+
+      span {
+        color: #ffe06f;
+      }
+    }
+  }
+
+  .row {
+    .card {
+      &:hover {
+        background-color: #ffe06f;
+        transform: translateY(-6px);
+      }
+
+      &:hover .descr {
+        color: black;
+      }
+
+      &:hover .title {
+        color: black;
+      }
+
+      &:hover img {
+        filter: brightness(0%);
+        -webkit-filter: brightness(0%);
+        -moz-filter: brightness(0%);
+      }
+
+      transition: .3s;
+      width: 306px;
+      background-color: #151A32;
+      padding: 40px 30px 0;
+      margin-bottom: 30px;
+      border-radius: 10px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        transition: .3s;
+      }
+
+      .descr {
+        transition: .3s;
+        margin-bottom: 30px;
+        color: #acacd0;
+        font-family: Mulish, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        text-align: center;
+      }
+
+      .title {
+        transition: .3s;
+        letter-spacing: 0px;
+        margin: 0;
+        font-family: Mulish, sans-serif;
+        color: #fff;
+        font-weight: 400;
+        font-weight: 700;
+        font-size: 20px;
+        padding-bottom: 15px;
+        text-align: center;
+      }
+
+      button {
+        text-transform: capitalize;
+        font-size: 18px;
+        color: #fff;
+        font-weight: 600;
+        background: #0e1123;
+        display: block;
+        padding: 15px;
+        border: 1px solid #0e1123;
+        border-radius: 30px 30px 0 0;
+        border-bottom: 0px;
+        display: block;
+        margin: 0 auto;
+        width: 246px;
+      }
+    }
+  }
+}
