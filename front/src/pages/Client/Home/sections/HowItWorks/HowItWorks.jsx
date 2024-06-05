@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -35,7 +36,7 @@ function HowItWorks() {
           <span>writing Content That Converts</span>
         </h2>
         <div className="row mt-[70px]">
-          <div className="col-lg-4 box">
+          <div className="col-lg-4 box" data-aos="fade-up" data-aos-delay="100" data-aos-offset="0" data-aos-duration="1000">
             <div className="sh_title">01</div>
             <div className="single_hiw_content">
               <h3>Magically Writes</h3>
@@ -45,7 +46,7 @@ function HowItWorks() {
               </p>
             </div>
           </div>
-          <div className="col-lg-4 box">
+          <div className="col-lg-4 box" data-aos="fade-up" data-aos-delay="200" data-aos-offset="0" data-aos-duration="1000">
             <div className="sh_title">02</div>
             <div className="single_hiw_content">
               <h3>Input context</h3>
@@ -55,7 +56,7 @@ function HowItWorks() {
               </p>
             </div>
           </div>
-          <div className="col-lg-4 box">
+          <div className="col-lg-4 box" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0" data-aos-duration="1000">
             <div className="sh_title">03</div>
             <div className="single_hiw_content">
               <h3>Choose Usecase</h3>
@@ -66,7 +67,7 @@ function HowItWorks() {
             </div>
           </div>
         </div>
-        <div className="video mt-20">
+        <div className="video mt-20" data-aos="fade-up" data-aos-delay="400" data-aos-offset="0" data-aos-duration="1000">
           <img
             src="https://ai-life-react.vercel.app/assets/video-bg-e357f6a8.jpg"
             alt=""

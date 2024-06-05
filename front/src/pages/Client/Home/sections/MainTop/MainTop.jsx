@@ -5,23 +5,6 @@ function MainTop() {
     <div className="MainTop-section">
       <div className="container max-w-[1296px]">
         <div className="wrapper">
-          {/* <TypeAnimation
-            sequence={[
-              // Same substring at the start will only be typed once, initially
-              "Get Quality & 10x Faster Way To Write Profile Bio",
-              2000,
-              "Get Quality & 10x Faster Way To Write Content Writing",
-              2000,
-              "Get Quality & 10x Faster Way To Write Blog Post",
-              2000,
-              "Get Quality & 10x Faster Way To Write Emails",
-              2000,
-            ]}
-            wrapper="h2"
-            speed={50}
-            style={{ fontSize: "2em" }}
-            repeat={Infinity}
-          /> */}
           <h1 className="text-center">
             Get Quality & 10x Faster Way To Write 
             <TypeAnimation

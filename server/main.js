@@ -31,12 +31,26 @@ const reviewSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+//? Articles
+const articleSchema = new mongoose.Schema(
+  {
+    img: String,
+    name: String,
+    title: String,
+    byWho: String,
+  },
+  { timestamps: true }
+);
+
 //] model
 //? CASE
 const caseModel = mongoose.model("case", caseSchema);
 
-// ? Reviews
+//? Reviews
 const reviewModel = mongoose.model("review", reviewSchema);
+
+//? Articles
+const articleModel = mongoose.model("article", articleSchema);
 
 //] requests
 //? CASES
@@ -218,6 +232,98 @@ app.delete("/api/reviews", async (req, res) => {
   }
 });
 
+// ? Articles
+
+app.get("/api/articles", async (req, res) => {
+  const { title } = req.query;
+  let articles;
+  if (title) articles = await articleModel.find({ title: title });
+  else articles = await articleModel.find();
+
+  if (articles.length > 0) {
+    res.status(200).send({
+      message: "success",
+      data: articles,
+    });
+  } else {
+    res.status(204).send({
+      message: "not found",
+      data: null,
+    });
+  }
+});
+app.get("/api/articles/:id", async (req, res) => {
+  const { id } = req.params;
+  let articles;
+  try {
+    articles = await articleModel.findById(id);
+  } catch (error) {
+    res.send({ error: error });
+  }
+
+  if (articles) {
+    res.status(200).send({
+      message: "success",
+      data: articles,
+    });
+  } else {
+    res.status(204).status({
+      message: "not found",
+      data: null,
+    });
+  }
+});
+app.post("/api/articles", async (req, res) => {
+  const articles = new articleModel(req.body);
+  await articles.save();
+  res.send(articles);
+});
+app.delete("/api/articles/:id", async (req, res) => {
+  const { id } = req.params;
+  let response;
+  try {
+    response = await articleModel.findByIdAndDelete(id);
+  } catch (error) {
+    res.send({
+      message: "not found",
+    });
+  }
+  if (response) {
+    res.send({
+      message: "deleted",
+      response: response,
+    });
+  } else {
+    res.send({
+      message: "fatal error (doesnt deleted...)",
+    });
+  }
+});
+app.delete("/api/articles", async (req, res) => {
+  let response;
+  try {
+    response = await articleModel.deleteMany({});
+  } catch (error) {
+    res.send({
+      message: "error",
+      error: error,
+    });
+  }
+
+  if (response.deletedCount > 0) {
+    res.send({
+      message: "success",
+      deletedCount: response.deletedCount,
+    });
+  } else {
+    res.send({
+      message: "no documents to delete",
+    });
+  }
+});
+
+
+
 mongoose
   .connect(process.env.CONNECTION_STRING)
   .then((res) => console.log("connected"))
@@ -229,6 +335,7 @@ app.listen(process.env.PORT, function (err) {
     "Server listening on Port",
     process.env.PORT,
     "\n\nhttp://localhost:1212/api/cases",
-    "\nhttp://localhost:1212/api/reviews \n"
+    "\nhttp://localhost:1212/api/reviews \n",
+    "\nhttp://localhost:1212/api/articles \n"
   );
 });

@@ -11,12 +11,19 @@ import "@splidejs/react-splide/css/sea-green";
 import "@splidejs/react-splide/css/core";
 
 import "./Reviews.scss";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ReviewsApi } from "../../../../../context/ContextApi";
 
+
+//| AOS 
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 function Reviews() {
+  useEffect(()=>{
+    Aos.init()
+  },[])
   const { reviewsData } = useContext(ReviewsApi);
-  // console.log('reviewsData:', reviewsData);
   return (
     <div className="Reviews-section">
       <div className="container max-w-[1296px]">

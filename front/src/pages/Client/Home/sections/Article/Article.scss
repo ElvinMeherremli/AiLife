@@ -1,0 +1,120 @@
+.Article-section {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #0F1123;
+
+  .title-top {
+    h4 {
+      font-size: 14px;
+      font-weight: 600;
+      padding: 0;
+      line-height: 1px;
+      margin: 0 0 5px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #ffe06f;
+      display: inline-block;
+    }
+    .line {
+      width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: #ffe06f;
+    margin: 4px 10px;
+    }
+  }
+  .title {
+    width: 60%;
+    margin: 0;
+    font-size: 32px;
+    color: #fff;
+    font-weight: 800;
+    text-transform: capitalize;
+    line-height: 44px; 
+    span {
+      color: #ffe06f;
+    }
+  }
+  .card {
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: #151A32;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 150px 0px rgba(78, 67, 250, .06);
+    box-shadow: 0 0 150px #4e43fa0f;
+    .image {
+      position: relative;
+      .image-content {
+        position: absolute;
+        left: 10%;
+        background: #ffe06f;
+        margin-top: 3%;
+        color: #232434;
+        padding: 7px 15px;
+        border-radius: 30px;
+        font-weight: 600;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+      }
+    }
+    .content {
+      .card-title-top {
+        display: flex;
+        height: 26px;
+        align-items: center;
+        gap: 7px;
+        .username-sec {
+          display: flex;
+          height: 26px;
+          align-items: center;
+          color: #acacd0;
+          gap: 3px;
+          font-weight: 500;
+          font-size: 14px;
+          svg {
+            color: #FFE06F;
+          }
+        }
+        .date-sec {
+          display: flex;
+          height: 26px;
+          align-items: center;
+          color: #acacd0;
+          gap: 3px;
+          font-weight: 500;
+          font-size: 14px;
+          svg {
+            color: #FFE06F;
+          }
+        }
+      }
+      .card-title {
+        margin-top: 10px;
+        h3 {
+          font-size: 20px;
+          color: white;
+          line-height: 25px;
+          transition: .3s;
+          &:hover {
+            color: #FFE06F;
+            cursor: pointer;
+          }
+        }
+      }
+      a {
+        color: #ffe06f;
+        font-weight: 600;
+        margin-top: 15px;
+        display: inline-block;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+        &:hover {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.Faq-section {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #0F1123;
+
+  .title-top {
+    h6 {
+      font-size: 14px;
+      font-weight: 600;
+      padding: 0;
+      line-height: 1px;
+      margin: 0 0 5px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #ffe06f;
+      display: inline-block;
+    }
+
+    .line {
+      width: 120px;
+      height: 1px;
+      display: inline-block;
+      background: #ffe06f;
+      margin: 4px 10px;
+    }
+  }
+
+  .title {
+    width: 60%;
+    margin: 0;
+    font-size: 32px;
+    color: #fff;
+    font-weight: 800;
+    text-transform: capitalize;
+    line-height: 44px;
+
+    span {
+      color: #ffe06f;
+    }
+  }
+}
+
+.ant-collapse {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .ant-collapse-item {
+    border: none;
+    background-color: #151A34;
+    background: #151a32 !important;
+    padding: 7px 0;
+    border-radius: 30px !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    .ant-collapse-content {
+      background-color: #151A34;
+      border: none;
+      border-radius: 30px !important;
+      .ant-collapse-content-box {
+        p {
+          color: #acacd0;
+        }
+      }
+    }
+    .ant-collapse-expand-icon {
+      display: none !important;
+    }
+    .ant-collapse-header-text {
+      color: white;
+      font-weight: 800;
+      font-size: 16px;
+    }
+    svg {
+      color: #151A34;
+      display: none;
+    }
+  }
+}
